@@ -1,0 +1,17 @@
+<div class="card-body">
+  <div class="select-item">
+    <div class="form-control">
+      <div class="select">
+        <select name="cities" id="cities">
+          <option
+            *ngFor="let city of cities"
+            value="city.name">{{city.name}}</option>
+        </select>
+      </div>
+      <input type="submit" value="update" class="btn btn-primary">
+    </div>
+  </div>
+  <div class="weather-template">
+
+  </div>
+</div>

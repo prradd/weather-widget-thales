@@ -1,0 +1,51 @@
+@use "/src/config";
+
+.form-control {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 10px;
+
+  .select {
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    position: relative;
+
+    select,
+    &::after {
+      grid-area: select;
+    }
+
+    min-width: 15ch;
+    max-width: 30ch;
+
+    border: 1px solid lighten(config.$primary-color, 50%);
+    border-radius: 0.15em;
+    padding: 0.25em 0.5em;
+
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+
+    // Optional styles
+    // remove for transparency
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+
+    // Custom arrow
+    &:not(.select--multiple)::after {
+      content: "";
+      justify-self: end;
+      width: 0.8em;
+      height: 0.5em;
+      background-color: config.$primary-color;
+      clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    }
+  }
+
+  .weather-template {
+    //background-image: url("./src/assets/124344-miui-8-weather-background-minimal-hd.png");
+  }
+}
+
+
