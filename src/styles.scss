@@ -93,4 +93,9 @@ select {
   }
 }
 
+//TODO move to weather-container component
+.weather-title .card-header {
+  border-radius: 0;
+}
+
 

@@ -1,5 +1,7 @@
-@use "/src/config";
-
+@use "../../../../config";
+.card-body {
+  border-top: 1px solid lighten(config.$primary-color, 50%);
+}
 .form-control {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -53,8 +55,5 @@
   }
 }
 
-.weather-template {
-  background-image: url("../../../assets/124344-miui-8-weather-background-minimal-hd.png");
-}
 
 

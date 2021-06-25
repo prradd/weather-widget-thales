@@ -1,0 +1,66 @@
+@use './src/config';
+@mixin headandfoot {
+  background: transparentize(config.$primary-background-color, 0.5);
+  height: 60px;
+}
+
+.weather-template {
+
+  position: relative;
+  width: 100%;
+
+  ::before {
+    content: "";
+    background-image: url("../../../assets/124344-miui-8-weather-background-minimal-hd.png");
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  .weather-header {
+    @include headandfoot;
+    padding: 10px;
+  }
+
+  .weather-footer {
+    @include headandfoot;
+    padding: 3px 10px 20px 10px;
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .weather-body {
+    height: 130px;
+    display: flex;
+    align-items: center;
+
+    .weather-icon {
+      content: "";
+      width: 50px;
+      height: 50px;
+      background: grey;
+      padding: 5px;
+      margin: 10px;
+    }
+
+    .weather-temp {
+      margin: 10px;
+      padding: 5px;
+
+      h1 {
+        font-size: 3.5em;
+      }
+      p{
+        font-size: 1.5em;
+      }
+    }
+  }
+}

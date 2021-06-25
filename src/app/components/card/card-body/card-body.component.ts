@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import CityList from "../CityList";
-import {ICity} from "../types";
+import CityList from "../../CityList";
+import {ICity} from "../../types";
 
 @Component({
   selector: 'app-card-body',
