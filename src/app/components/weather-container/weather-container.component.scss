@@ -1,6 +1,6 @@
 @use './src/config';
 @mixin headandfoot {
-  background: transparentize(config.$primary-background-color, 0.5);
+  background: transparentize(darken(config.$primary-background-color, 10%), 0.5);
   height: 60px;
 }
 
@@ -43,12 +43,6 @@
     align-items: center;
 
     .weather-icon {
-      content: "";
-      width: 50px;
-      height: 50px;
-      background: grey;
-      padding: 5px;
-      margin: 10px;
     }
 
     .weather-temp {
@@ -60,6 +54,9 @@
       }
       p{
         font-size: 1.5em;
+        font-weight: 700;
+        text-transform: capitalize;
+
       }
     }
   }

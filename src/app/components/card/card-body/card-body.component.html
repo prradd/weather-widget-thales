@@ -1,18 +1,23 @@
 <div class="card-body">
   <div class="select-item">
     <div class="form-control">
-      <div class="select">
-        <select required name="cities" id="cities">
-          <option selected disabled value="choose">Select city...</option>
-          <option
-            *ngFor="let city of cities"
-            [value]=city.name>{{city.name}}</option>
-        </select>
-      </div>
-      <input type="submit" value="update" class="btn btn-primary">
+      <form class="select" [formGroup]="chosenCity" (ngSubmit)="onSubmit()">
+
+          <select formControlName="city" required name="cities" id="cities">
+            <option [ngValue]="null" selected disabled value="choose">Select city...</option>
+            <option
+              *ngFor="let city of cities"
+              [value]=city.id>{{city.name}}
+            </option>
+          </select>
+
+        <input type="submit" value="update" class="btn btn-block">
+      </form>
+
     </div>
   </div>
 
-  <app-weather-container [ngStyle]="{'padding': '10px'}"></app-weather-container>
+  <app-weather-container [cityWeather]="cityWeather"
+                          [ngStyle]="{'padding': '10px'}"></app-weather-container>
 
 </div>

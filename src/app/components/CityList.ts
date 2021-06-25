@@ -1,4 +1,4 @@
-import {ICity} from "./types";
+import {ICity} from "../types";
 
 const CityList: Array<ICity> =
   [

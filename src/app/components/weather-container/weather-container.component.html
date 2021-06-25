@@ -1,18 +1,20 @@
-<div class="weather-template">
+<div *ngIf="cityWeather" class="weather-template">
   <div class="weather-header">
-    <h1>City</h1>
+    <h1>{{cityWeather.name}}</h1>
   </div>
   <div class="weather-body">
-    <div class="weather-icon"></div>
+    <div class="weather-icon">
+      <img src="http://openweathermap.org/img/wn/{{cityWeather.weather[0].icon}}@2x.png" alt="">
+    </div>
     <div class="weather-temp">
-      <h1>13°</h1>
-      <p>Clouds</p>
+      <h1>{{cityWeather.main?.temp}}°</h1>
+      <p>{{cityWeather.weather[0]?.description}}</p>
     </div>
   </div>
   <div class="weather-footer">
     <div class="weather-footer-wrapper">
-      <p>Humidity: 71</p>
-      <p>Air Pressure: 1000</p>
+      <p>Humidity: {{cityWeather.main?.humidity}}</p>
+      <p>Air Pressure: {{cityWeather.main?.pressure}}</p>
     </div>
   </div>
 </div>
