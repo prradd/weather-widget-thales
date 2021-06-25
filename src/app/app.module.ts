@@ -6,13 +6,15 @@ import { CardTitleComponent } from './components/card-title/card-title.component
 import { CardBodyComponent } from './components/card-body/card-body.component';
 import { CardComponent } from './components/card/card.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { WeatherContainerComponent } from './components/weather-container/weather-container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardTitleComponent,
     CardBodyComponent,
-    CardComponent
+    CardComponent,
+    WeatherContainerComponent
   ],
   imports: [
     BrowserModule,

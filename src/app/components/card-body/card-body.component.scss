@@ -11,11 +11,6 @@
     align-items: center;
     position: relative;
 
-    select,
-    &::after {
-      grid-area: select;
-    }
-
     min-width: 15ch;
     max-width: 30ch;
 
@@ -27,9 +22,6 @@
     cursor: pointer;
     line-height: 1.1;
 
-    // Optional styles
-    // remove for transparency
-    background-color: #fff;
     background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 
     // Custom arrow
@@ -40,12 +32,29 @@
       height: 0.5em;
       background-color: config.$primary-color;
       clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+
+    }
+
+    select,
+    &::after {
+      grid-area: select;
+      color: lighten(config.$primary-color, 50%);
+    }
+
+    option {
+      color: lighten(config.$primary-color, 50%);
+    }
+
+    select {
+      option {
+        color: config.$primary-color;
+      }
     }
   }
+}
 
-  .weather-template {
-    //background-image: url("./src/assets/124344-miui-8-weather-background-minimal-hd.png");
-  }
+.weather-template {
+  background-image: url("../../../assets/124344-miui-8-weather-background-minimal-hd.png");
 }
 
 
