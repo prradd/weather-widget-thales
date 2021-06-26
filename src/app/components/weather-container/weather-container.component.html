@@ -7,7 +7,7 @@
       <img src="http://openweathermap.org/img/wn/{{cityWeather.weather[0].icon}}@2x.png" alt="">
     </div>
     <div class="weather-temp">
-      <h1>{{cityWeather.main?.temp}}°</h1>
+      <h1>{{cityWeather.main.temp | number: '1.0-0'}}°</h1>
       <p>{{cityWeather.weather[0]?.description}}</p>
     </div>
   </div>

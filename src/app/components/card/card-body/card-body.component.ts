@@ -29,8 +29,6 @@ export class CardBodyComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.chosenCity.value.city)
-    //TODO round the temp
     this.weatherService.fetchWeather(this.chosenCity.value.city)
       .subscribe((weather) => this.cityWeather = weather);
   }
