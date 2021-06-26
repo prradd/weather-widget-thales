@@ -1,0 +1,55 @@
+@use "../../../config";
+
+$baseColor: lighten(config.$primary-color, 20%);
+
+.submitWrap {
+  height: 100%;
+  width: 70%;
+  position: relative;
+
+  .btn {
+    background-color: rgb(200,200,200);
+    color: $baseColor;
+    border: 1.5px solid rgba(100,100,100,0.4);
+    border-radius: 14px;
+    box-shadow: 0 0 0 1px rgba(250,250,250,1) inset,
+    0 0 0 4px rgba(250,250,250,0.7) inset,
+    0 -0.5px 1px 5px rgba(80,80,80,0.8) inset,
+    0 30px rgba(250,250,250,0.25) inset;
+    display: inline-block;
+
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-shadow: 0 0 1px $baseColor, 0 0 0 $baseColor;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+
+  }
+
+  &::before {
+    content: "★";
+    font-size: 1.5rem;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    display: block;
+    color: #989898;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "★";
+    font-size: 1.5rem;
+    position: absolute;
+    top: 20%;
+    left: 78%;
+    display: block;
+    color: #989898;
+    z-index: 1;
+
+  }
+}

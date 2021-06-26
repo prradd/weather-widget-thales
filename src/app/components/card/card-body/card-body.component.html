@@ -1,7 +1,7 @@
 <div class="card-body">
   <div class="select-item">
     <div class="form-control">
-      <form class="select" [formGroup]="chosenCity" (ngSubmit)="onSubmit()">
+      <form class="select" id="weather-select" [formGroup]="chosenCity" (ngSubmit)="onSubmit()">
 
           <select formControlName="city" required name="cities" id="cities">
             <option [ngValue]="null" selected disabled value="choose">Select city...</option>
@@ -11,7 +11,8 @@
             </option>
           </select>
 
-        <input type="submit" value="update" class="btn btn-block">
+        <app-button [ngStyle]="{'height': '100%'}"></app-button>
+
       </form>
 
     </div>

@@ -29,8 +29,9 @@ export class CardBodyComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.weatherService.fetchWeather(this.chosenCity.value.city)
-      .subscribe((weather) => this.cityWeather = weather);
+    if (!!this.chosenCity.value.city){
+      this.weatherService.fetchWeather(this.chosenCity.value.city)
+        .subscribe((weather) => this.cityWeather = weather);
+    }
   }
-
 }
