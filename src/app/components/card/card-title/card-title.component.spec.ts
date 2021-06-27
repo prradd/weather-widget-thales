@@ -22,4 +22,11 @@ describe('CardTitleComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should title be equal "Title" by default`, () => {
+    const comp = fixture.componentInstance;
+    expect(comp.title).toEqual('Title');
+  })
+
+
 });

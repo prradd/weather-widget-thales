@@ -12,9 +12,9 @@ import {ICity, IWeather} from "../../../types";
 export class CardBodyComponent implements OnInit {
   @Output() onFetchWeather: EventEmitter<IWeather> = new EventEmitter();
 
-  cities: Array<ICity> = CityList;
-  cityWeather: IWeather | null = null;
+  cities: Array<ICity> = CityList; // City list provided by the assignment
   chosenCity: FormGroup = {} as FormGroup;
+  cityWeather: IWeather | null = null; // Weather returned from the API
 
   constructor(private fb: FormBuilder, private weatherService: WeatherService) { }
 
