@@ -1,5 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {FormBuilder, ReactiveFormsModule, FormsModule} from '@angular/forms';
+
 import { CardBodyComponent } from './card-body.component';
+import { WeatherService } from '../../../services/weather.service';
+import {HttpClientTestingModule} from "@angular/common/http/testing";
 
 describe('CardBodyComponent', () => {
   let component: CardBodyComponent;
@@ -7,6 +11,7 @@ describe('CardBodyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [ ReactiveFormsModule, FormsModule, HttpClientTestingModule ],
       declarations: [ CardBodyComponent ]
     })
     .compileComponents();

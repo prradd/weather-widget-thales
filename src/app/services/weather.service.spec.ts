@@ -1,15 +1,18 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { WeatherService } from './weather.service';
 
-describe('WeatherService', () => {
+describe('WeatherService', async () => {
   let service: WeatherService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
+  beforeEach( async () => {
+    TestBed.configureTestingModule({
+      providers: [ WeatherService ],
+      imports: [ HttpClientTestingModule ],
+    });
     service = TestBed.inject(WeatherService);
+
   });
 
   it('should be created', () => {
