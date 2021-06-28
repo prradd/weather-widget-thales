@@ -20,6 +20,6 @@ export interface IWeather {
     feels_like: number;
     pressure: number;
     humidity: number
-  }
+  };
   name: string;
 }
